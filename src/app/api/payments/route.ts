@@ -54,7 +54,6 @@ export async function POST(request: Request) {
                     await supabase.from('tickets').insert({
                         user_id: userId,
                         event_id: eventId,
-                        event_id: eventId, // Typo fixed in next line implicitly
                         payment_id: payment.id,
                         status: 'valid'
                     })
